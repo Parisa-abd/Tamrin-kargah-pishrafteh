@@ -1,0 +1,19 @@
+class Book:
+    def __init__(self, t, a, p, pr):
+        self.title = t
+        self.author = a
+        self.pages = p
+        self.price = pr
+
+    def show(self):
+        print(f"{self.title} by {self.author}")
+        print(f"{self.pages} pages - ${self.price:.2f}")
+
+    def discount(self, d):
+        self.price *= 1 - d / 100
+
+b = Book("Bolandi Haye bad gir", "Emily Bronte:)", 400, 19.99)
+b.show()
+b.discount(10)
+print("After discount:")
+b.show()
