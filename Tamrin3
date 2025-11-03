@@ -1,0 +1,17 @@
+students = {
+    "Parisa": [12, 15, 14, 20],
+    "Nazi": [18, 17, 19, 20],
+    "Maria": [14, 15, 14, 16]
+}
+
+top_name = ""
+top_avg = 0
+
+for name, scores in students.items():
+    avg = sum(scores) / len(scores)
+    print(name, "Average:", round(avg, 2))
+    if avg > top_avg:
+        top_avg = avg
+        top_name = name
+
+print("Top student:", top_name)
