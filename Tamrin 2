@@ -1,0 +1,14 @@
+grades = []
+n = int(input("How many grades? "))
+
+for i in range(n):
+    g = float(input("Enter grade: "))
+    if g >= 0:
+        grades.append(g)
+
+if grades:
+    avg = sum(grades) / len(grades)
+else:
+    avg = 0
+
+print("Average:", round(avg, 2))
